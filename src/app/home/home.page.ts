@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +6,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements AfterViewInit {
-  // @ViewChild('reason') reasonRef: ElementRef;
-  // @ViewChild('amount') amountRef//: ElementRef;
+  // https://www.youtube.com/watch?v=r2ga-iXS5i4
   reasonRef;
   amountRef;
 
