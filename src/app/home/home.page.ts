@@ -9,6 +9,8 @@ export class HomePage implements AfterViewInit {
   // https://www.youtube.com/watch?v=r2ga-iXS5i4
   @ViewChild('reasonRef', { static: false }) reasonRef: any;
   @ViewChild('amountRef', { static: false }) amountRef: any;
+  // https://www.tektutorialshub.com/angular/renderer2-angular/
+  @ViewChild('itemRef', { static: false }) itemRef; //:...
 
   text = 'Ready to create an app?';
   defaultText = 'Ready to create an app?';
