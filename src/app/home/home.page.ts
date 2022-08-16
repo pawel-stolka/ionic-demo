@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +7,13 @@ import { AfterViewInit, Component } from '@angular/core';
 })
 export class HomePage implements AfterViewInit {
   // https://www.youtube.com/watch?v=r2ga-iXS5i4
-  reasonRef;
-  amountRef;
+  @ViewChild('reasonRef', { static: false }) reasonRef: any;
+  @ViewChild('amountRef', { static: false }) amountRef: any;
 
   text = 'Ready to create an app?';
   defaultText = 'Ready to create an app?';
 
-  constructor() {}
+  constructor(private renderer: Renderer2) { }
 
   ngAfterViewInit() {
 
@@ -33,6 +33,6 @@ export class HomePage implements AfterViewInit {
   }
 
   confirm() {
-    console.log('confirm...',  this.reasonRef, this.amountRef); //, this.reasonRef.nativeElement, this.amountRef);
+    console.log('confirm...', this.reasonRef?.value, this.amountRef?.value);
   }
 }
